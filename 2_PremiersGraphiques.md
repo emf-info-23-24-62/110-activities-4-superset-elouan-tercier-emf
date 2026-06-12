@@ -56,11 +56,18 @@ Sauvegardez le graphique :
 
 **Réponse — Quel secteur domine largement en termes d'émissions absolues ?**
 
-    (votre réponse ici)
+    L'**Industrie** domine très largement avec 45 200 t en 2024 — soit 62 % du total
+    de toutes les émissions cumulées (73 200 t). Les 3 autres secteurs réunis
+    (IT + Commerce + Services = 28 000 t) ne représentent même pas la moitié de l'Industrie.
 
 **Réponse — Quel secteur a la croissance la plus forte sur la période ?**
 
-    (votre réponse ici)
+    L'**IT** : +82 % (de 2 800 t en 2015 à 5 100 t en 2024).
+    Classement de la croissance 2015→2024 :
+    - IT        : +82 % (+2 300 t)
+    - Commerce  : +22 % (+1 900 t)
+    - Services  : +19 % (+2 000 t)
+    - Industrie : -6  % (-2 800 t)  ← seul secteur en baisse
 
 ---
 
@@ -78,7 +85,9 @@ Sauvegardez : `Emissions CO2 par secteur en 2024`
 
 **Réponse — L'Industrie émet combien de fois plus que le secteur IT en 2024 ?**
 
-    (votre réponse ici)
+    45 200 / 5 100 = **8,86 fois**, soit environ **× 9**.
+    (Attention : c'est un rapport en valeur absolue ; quand on rapporte au CA ou
+    aux emplois, l'écart change complètement — voir exercice 3 de la partie 3.)
 
 ---
 
@@ -96,7 +105,12 @@ Sauvegardez : `Part renouvelable par secteur`
 
 **Réponse — Quel secteur adopte le plus rapidement les énergies renouvelables ?**
 
-    (votre réponse ici)
+    L'**IT**, et de loin : 18 % en 2015 → **55 %** en 2024, soit **+37 points** en 10 ans.
+    Classement de la progression :
+    - IT        : +37 points  (18 → 55 %)
+    - Services  : +22 points  (14 → 36 %)
+    - Commerce  : +21 points  (12 → 33 %)
+    - Industrie : +13 points  (8  → 21 %)
 
 ---
 
@@ -115,7 +129,10 @@ Sauvegardez : `Emplois par secteur`
 
 **Réponse — Quel secteur emploie le plus de personnes en 2024 ?**
 
-    (votre réponse ici)
+    Les **Services** : 48 000 employés en 2024.
+    Ranking 2024 : Services (48 000) > Industrie (28 500) > Commerce (21 500) > IT (8 500).
+    À noter : IT a la plus petite masse salariale mais a doublé ses effectifs depuis 2015
+    (4 200 → 8 500, +102 %).
 
 ---
 
@@ -160,7 +177,11 @@ Exécutez la requête et observez les résultats.
 
 **Réponse — Quel secteur a les émissions les plus élevées par employé en 2024 ?**
 
-    (votre réponse ici)
+    L'**Industrie** avec **1,59 t CO2 / employé** en 2024 — très loin devant les autres :
+    - Industrie : 1,586 t/employé   (45 200 / 28 500)
+    - IT       : 0,600 t/employé   (5 100 / 8 500)
+    - Commerce : 0,484 t/employé   (10 400 / 21 500)
+    - Services : 0,260 t/employé   (12 500 / 48 000)
 
 ### Requête 2 — Emissions par million de CHF de CA
 
@@ -176,7 +197,20 @@ ORDER BY emissions_par_MCHF DESC;
 
 **Réponse — Le classement des secteurs change-t-il selon la métrique utilisée (absolu, par employé, par MCHF de CA) ?**
 
-    (votre réponse ici)
+    OUI, et c'est très éclairant. Récapitulatif des classements 2024 (1 = plus polluant) :
+
+    | Secteur   | Absolu | Par employé | Par MCHF |
+    |-----------|--------|-------------|----------|
+    | Industrie |   1    |     1       |     1    |  ← toujours premier
+    | Services  |   2    |     4       |     3    |  ← bon en "par employé"
+    | Commerce  |   3    |     3       |     2    |
+    | IT        |   4    |     2       |     4    |  ← le plus efficient au CA
+
+    Seule l'Industrie reste première sur les 3 axes (volume + intensité par tête + par MCHF).
+    Les 3 autres secteurs voient leur classement bouger : IT passe de "le moins polluant en absolu"
+    à "2ème par employé" (parce qu'il a peu de monde) ; Services dégringole du 2ème au 4ème
+    en absolu vs par employé (parce qu'il a énormément d'employés). Cela illustre la nécessité de
+    toujours préciser **quelle unité** on utilise quand on parle de pollution.
 
 ---
 
@@ -220,7 +254,17 @@ Cliquez sur **Save** puis **Save and go to dashboard**.
 
 **Réponse — En filtrant uniquement le secteur IT, quelle tendance ressort clairement ?**
 
-    (votre réponse ici)
+    Le secteur IT est en **pleine explosion** sur tous les axes simultanément :
+    - Emplois  : 4 200 → 8 500   (+102 %, doublement)
+    - CA       : 890 → 2 100 MCHF (+136 %)
+    - Émissions: 2 800 → 5 100 t (+82 %)
+    - Part renouvelable : 18 → 55 % (+37 points)
+
+    Lecture : c'est un secteur en hyper-croissance économique, qui malgré une transition
+    énergétique massive (la part de renouvelable triple presque) voit quand même ses
+    émissions absolues augmenter — la croissance du volume d'activité l'emporte sur les
+    gains d'efficacité. On verra dans la partie 3 que ce schéma "croissance + renouvelables
+    + émissions qui montent" peut être utilisé pour faire mentir les statistiques.
 
 ---
 
